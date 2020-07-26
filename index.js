@@ -6,6 +6,8 @@ const bodyParser = require('body-parser')
 
 //importing local module
 const dishRouter = require('./routes/dishRoute')
+const promotionRouter = require('./routes/promotionsRoute')
+
 
 //host detail
 const hostName = 'localhost'
@@ -18,9 +20,10 @@ app.use(morgan('dev'))
 app.use(bodyParser.json())
 
 //setting up Routes
-//'/dishes' route
+//dishes route
 app.use('/dishes', dishRouter)
-//'dishes/:dishId route
+//promotions route
+app.use('/promotions', promotionRouter)
 
 
 //default page and rendering static HTML
