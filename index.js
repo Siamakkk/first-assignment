@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 //importing local module
 const dishRouter = require('./routes/dishRoute')
 const promotionRouter = require('./routes/promotionsRoute')
-
+const leaderRouter = require('./routes/leadersRoute')
 
 //host detail
 const hostName = 'localhost'
@@ -24,6 +24,8 @@ app.use(bodyParser.json())
 app.use('/dishes', dishRouter)
 //promotions route
 app.use('/promotions', promotionRouter)
+//leaders route
+app.use('/leaders', leaderRouter)
 
 
 //default page and rendering static HTML
